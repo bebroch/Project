@@ -19,8 +19,6 @@ export class RequestDataBuilderService {
     private getDataContacts(response: any) {
         if (!response.data) return null;
 
-        console.log(response.data._embedded.contacts);
-
         if (response.data._embedded?.contacts.length === 1)
             return response.data._embedded.contacts[0];
 
