@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "3a9e5723-679b-4f7e-ad84-26f9b87955ea",
+		"name": "AmoCRM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29491252"
+	},
+	"item": [
+		{
+			"name": "TestContact1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v3/contacts?name=Пётр Павлович Саркадык&phone=+7(953)171-12-80&email=PetrPavl@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v3",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Пётр Павлович Саркадык"
+						},
+						{
+							"key": "phone",
+							"value": "+7(953)171-12-80"
+						},
+						{
+							"key": "email",
+							"value": "PetrPavl@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestContact2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v3/contacts?name=Петровский Никита Кириллович&phone=+7(953)288-52-62&email=Ptrovich@yandex.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v3",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Петровский Никита Кириллович"
+						},
+						{
+							"key": "phone",
+							"value": "+7(953)288-52-62"
+						},
+						{
+							"key": "email",
+							"value": "Ptrovich@yandex.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
