@@ -48,6 +48,7 @@ export class ContactService {
     async findByEmailOrPhone(data: contactData) {
         const contactByEmail = await this.findByEmail(data.email);
         const contactByPhone = await this.findByPhone(data.phone);
+        console.log(contactByEmail, contactByPhone);
         const contact = contactByEmail ? contactByEmail : contactByPhone;
         return contact;
     }

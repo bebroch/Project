@@ -17,7 +17,11 @@ export class RequestDataBuilderService {
     ) {}
 
     private getDataContacts(response: any) {
-        if (response.data._embedded.contacts.length === 1)
+        if (!response.data) return null;
+
+        console.log(response.data._embedded.contacts);
+
+        if (response.data._embedded?.contacts.length === 1)
             return response.data._embedded.contacts[0];
 
         return response.data._embedded.contacts;
@@ -49,10 +53,12 @@ export class RequestDataBuilderService {
         const token = await this.JsonService.getToken();
         const fullUrl = await this.BuildUrlService.ApiContact();
 
-        await this.RequestService.post(fullUrl, {
+        const response = await this.RequestService.post(fullUrl, {
             headers: { Authorization: token },
             data,
         });
+
+        return this.getDataContacts(response);
     }
 
     async makeDeal(data: Record<string, any>) {

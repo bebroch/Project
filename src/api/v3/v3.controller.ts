@@ -27,6 +27,7 @@ export class V3Controller {
             );
         } catch (err: any) {
             console.error(err);
+            // console.error(err.response.data["validation-errors"][0].errors);
             return this.ResponseService.send(
                 "There was an error creating the deal",
             );

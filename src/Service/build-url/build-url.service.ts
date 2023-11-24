@@ -7,13 +7,15 @@ import { JsonService } from "src/Service/json/json.service";
 export class BuildUrlService {
     constructor(private readonly JsonService: JsonService) {}
 
-    async ContactWithParams(query: contactData) {
-        const { name, email, phone } = query;
+    async ContactWithParams(queryData: contactData) {
+        const { email, phone } = queryData;
         const url = await this.ApiContact();
 
-        if (!name || !email || !phone) return url;
+        if (!email && !phone) return url;
 
-        return `${url}?name=${name}&email=${email}&phone=${phone}`;
+        const query = email ? email : phone;
+
+        return `${url}?query=${query}`;
     }
 
     async ContactWithId(id: number) {

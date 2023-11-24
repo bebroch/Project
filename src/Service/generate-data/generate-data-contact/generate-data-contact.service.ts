@@ -10,27 +10,27 @@ export class GenerateDataContactService {
             name,
             custom_fields_values: [
                 {
-                    field_id: 14517,
+                    field_id: 33809,
                     field_name: "Телефон",
                     field_code: "PHONE",
                     field_type: "multitext",
                     values: [
                         {
                             value: phone,
-                            enum_id: 7197,
+                            enum_id: 16655,
                             enum_code: "WORK",
                         },
                     ],
                 },
                 {
-                    field_id: 14519,
+                    field_id: 33811,
                     field_name: "Email",
                     field_code: "EMAIL",
                     field_type: "multitext",
                     values: [
                         {
                             value: email,
-                            enum_id: 7209,
+                            enum_id: 16667,
                             enum_code: "WORK",
                         },
                     ],
